@@ -15,13 +15,6 @@ jobs:
         type: 'zip'
         filename: 'release.zip'
         exclusions: '*.git* /*node_modules/* .editorconfig install.sh README*'
-    - name: Archive Release 2  
-      uses: thedoctor0/zip-release@release.zip
-      with:
-        type: 'zip'
-        filename: 'release.zip'
-        exclusions: '*.git* /*node_modules/* .editorconfig install.sh README*'
-
     - name: Upload Release
       uses: ncipollo/release-action@v1
       with:
