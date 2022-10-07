@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1.0.3
+    - uses: actions/checkout@main
       with: 
         fetch-depth: 0
     - name: Archive Release
@@ -17,7 +17,7 @@ jobs:
         exclusions: '*.git* /*node_modules/* .editorconfig'
 
     - name: Upload Release
-      uses: ncipollo/release-action@v1.0.3
+      uses: ncipollo/release-action@v1
       with:
         artifacts: "release.zip"
         token: ${{ secrets.GITHUB_TOKEN }}
