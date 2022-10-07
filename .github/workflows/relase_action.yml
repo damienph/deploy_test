@@ -4,17 +4,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: checkout
     - uses: actions/checkout@master
     - name: Archive Release
       uses: thedoctor0/zip-release@main
       with:
         type: 'zip'
         filename: 'release.zip'
-        exclusions: '*.git* /*node_modules/* .editorconfig'
+        #exclusions: '*.git* /*node_modules/* .editorconfig'
 
     - name: Upload Release
       uses: ncipollo/release-action@v1
       with:
         artifacts: "release.zip"
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.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 }}
