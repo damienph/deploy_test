@@ -1,0 +1,27 @@
+name: Create Archive
+on: [push]
+#on: 
+#  push: 
+#    tags: 
+#      - '*' 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+      with: 
+        fetch-depth: 0
+    - name: Archive Release
+      uses: thedoctor0/zip-release@main
+      with:
+        type: 'zip'
+        filename: 'release.zip'
+        exclusions: '*.git* /*node_modules/* .editorconfig'
+
+    - name: Upload Release
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "release.zip"
+        token: ${{ secrets.GITHUB_TOKEN }}
+        #repo-token: ${{ secrets.GITHUB_TOKEN }}
+        #token: "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"
