@@ -16,10 +16,10 @@ jobs:
         filename: 'release.zip'
         exclusions: '*.git* /*node_modules/* .editorconfig install.sh README*'
         
-    - uses: actions/upload-artifact@v1
-      with:
-        name: 'release.zip'
-        path: ${{ github.workspace }}/result.zip
+   # - uses: actions/upload-artifact@v1
+   #   with:
+   #     name: 'release.zip'
+   #     path: ${{ github.workspace }}/result.zip
         
     - name: Upload Release
       uses: ncipollo/release-action@v1
