@@ -19,7 +19,7 @@ jobs:
     - name: Archive Release 1
       uses:  PVS-Australia/zip-release@main
       with:
-        type: env.TYPE
+        type: ${{ env.TYPE }}
         filename: 'install_assets.zip'
         filename_deploy: 'trac_util_scripts.zip'
         exclusions: '*.git* /*node_modules/* .editorconfig install.sh README*'
