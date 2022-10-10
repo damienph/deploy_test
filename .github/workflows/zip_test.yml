@@ -13,11 +13,15 @@ jobs:
       uses:  PVS-Australia/zip-release@main
       with:
         type: 'zip' 
-        filename: 'release.zip'
+        filename: 'install_assets.zip'
+        filename_deploy: 'trac_util_scripts.zip'
+        # excludes file in the release 
         exclusions: '*.git* /*node_modules/* .editorconfig install.sh README*'
+        # included files in the final compression
+        inclusions: 'trac_util_scripts.zip README* install.sh'
     - name: Upload Release
       uses: ncipollo/release-action@v1
       with:
-        artifacts: "release.zip"
+        artifacts: "install_assets.zip"
         token: ${{ secrets.GITHUB_TOKEN }}
         allowUpdates: "true"
