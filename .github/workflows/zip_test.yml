@@ -1,4 +1,11 @@
 name: create release
+env:
+  TYPE: 'zip'
+  FILENAME: 'install_assets.zip'
+  FILENAME_DEPLOY: 'trac_util_scripts.zip'
+  EXCLUSIONS: '*.git* /*node_modules/* .editorconfig install.sh README*'
+  INCLUSIONS: 'trac_util_scripts.zip README* install.sh'
+
 on:
   release:
     types: [published]
@@ -12,12 +19,10 @@ jobs:
     - name: Archive Release 1
       uses:  PVS-Australia/zip-release@main
       with:
-        type: 'zip' 
+        type: env.TYPE
         filename: 'install_assets.zip'
         filename_deploy: 'trac_util_scripts.zip'
-        # excludes file in the release 
         exclusions: '*.git* /*node_modules/* .editorconfig install.sh README*'
-        # included files in the final compression
         inclusions: 'trac_util_scripts.zip README* install.sh'
     - name: Upload Release
       uses: ncipollo/release-action@v1
