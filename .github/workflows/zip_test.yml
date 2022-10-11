@@ -4,7 +4,7 @@ env:
   FILENAME: 'install_assets.zip'
   FILENAME_DEPLOY: 'trac_util_scripts.zip'
   EXCLUSIONS: '*.git* /*node_modules/* .editorconfig install.sh README*'
-  INCLUSIONS: 'install_assets.zip README* install.sh'
+  INCLUSIONS: 'trac_util_scripts.zip README* install.sh'
 
 on:
   release:
