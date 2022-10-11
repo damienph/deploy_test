@@ -4,7 +4,7 @@ env:
   FILENAME: 'install_assets.zip'
   FILENAME_DEPLOY: 'trac_util_scripts.zip'
   EXCLUSIONS: '*.git* /*node_modules/* .editorconfig install.sh README*'
-  INCLUSIONS: 'README* install.sh'
+  INCLUSIONS: 'install_assets.zip README* install.sh'
 
 on:
   release:
@@ -24,7 +24,7 @@ jobs:
         filename_deploy: ${{ env.FILENAME_DEPLOY }}
         exclusions: ${{ env.EXCLUSIONS }}
         #inclusions: 'trac_util_scripts.zip README* install.sh' 
-        inclusions: ${{ env.INCLUSIONS env.FILENAME_DEPLOY }}
+        inclusions: ${{ env.INCLUSIONS }}
     - name: Upload Release
       uses: ncipollo/release-action@v1
       with:
