@@ -26,7 +26,7 @@ jobs:
         #inclusions: 'trac_util_scripts.zip README* install.sh' 
         inclusions: ${{ env.INCLUSIONS }}
     - name: Upload Release
-      uses: ncipollo/release-action@v1
+      uses: PVS-Australia/release-action@v1
       with:
         artifacts: ${{ env.FILENAME }}
         token: ${{ secrets.GITHUB_TOKEN }}
