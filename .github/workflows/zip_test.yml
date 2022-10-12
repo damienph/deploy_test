@@ -44,3 +44,4 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         allowUpdates: "true"
         name: '${{ github.event.release.name }}'
+        body: "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
