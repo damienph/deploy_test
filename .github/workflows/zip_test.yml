@@ -27,8 +27,8 @@ jobs:
       with: 
         fetch-depth: 0
     - name: Archive Release 1
-      #uses:  PVS-Australia/zip-release@main
-      uses:  PVS-Australia/zip-release@'${{ env.BRANCH }}'
+      uses:  PVS-Australia/zip-release@main
+      #uses:  PVS-Australia/zip-release@'${{ env.BRANCH }}'
       with:
         type: ${{ env.TYPE }}
         filename: ${{ env.FILENAME }}
