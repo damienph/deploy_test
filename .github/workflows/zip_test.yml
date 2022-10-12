@@ -5,7 +5,7 @@ env:
   FILENAME_DEPLOY: 'trac_util_scripts.zip'
   EXCLUSIONS: '*.git* /*node_modules/* .editorconfig install.sh README*'
   INCLUSIONS: 'trac_util_scripts.zip README* install.sh'
-  METADATA: ${{ env.REPOSITORY_HOMEPAGE_URL }}
+  METADATA: ${{ REPOSITORY_HOMEPAGE_URL }}
 
 on:
   release:
