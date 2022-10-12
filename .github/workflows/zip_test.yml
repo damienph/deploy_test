@@ -28,7 +28,7 @@ jobs:
         fetch-depth: 0
     - name: Archive Release 1
       #uses:  PVS-Australia/zip-release@main
-      uses:  PVS-Australia/zip-release@'${{ github.event.release.target_commitish }}'
+      uses:  PVS-Australia/zip-release@'${{ env.BRANCH }}'
       with:
         type: ${{ env.TYPE }}
         filename: ${{ env.FILENAME }}
