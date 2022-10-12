@@ -45,3 +45,4 @@ jobs:
         allowUpdates: "true"
         name: '${{ github.event.release.name }}'
         body: '${{ github.event.release.body }}'
+        prerelease: '${{ github.event.release.prerelease }}'
