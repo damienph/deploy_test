@@ -26,7 +26,7 @@ jobs:
       with: 
         fetch-depth: 0
     - name: Archive Release 1
-      uses:  PVS-Australia/zip-release@$main
+      uses:  PVS-Australia/zip-release@main
       with:
         type: ${{ env.TYPE }}
         filename: ${{ env.FILENAME }}
