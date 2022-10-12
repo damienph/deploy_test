@@ -14,7 +14,7 @@ env:
   BRANCH: '${{ github.event.release.target_commitish }}'
 #  This next variable is a hack to see ALL of the DOM of the github variable to help you work out what bits you may need to extract (so even though it is commented out, don't delete!)
   #GITHUB_CONTEXT: ${{ toJson(github) }}
-  GITHUB_CONTEXT: '${{ toJson(github.event.event.release) }}'
+  GITHUB_CONTEXT: '${{ toJson(github) }}'
 
 on:
   release:
@@ -43,4 +43,4 @@ jobs:
         artifacts: ${{ env.FILENAME }}
         token: ${{ secrets.GITHUB_TOKEN }}
         allowUpdates: "true"
-        name: '${{ github.event.event.release.name }}'
+        name: '${{ github.event.release.name }}'
