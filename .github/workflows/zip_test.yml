@@ -10,7 +10,7 @@ env:
   FILENAME: '${{ github.event.repository.name }}_${{ github.event.release.tag_name }}.zip'
   FILENAME_DEPLOY: 'install_assets.zip'
   EXCLUSIONS: '*.git* /*node_modules/* .editorconfig install.sh README*'
-  INCLUSIONS: 'install_assets.zip README* install.sh'
+  INCLUSIONS: 'install_assets.zip RELEASE.yml README* install.sh'
   BRANCH: '${{ github.event.release.target_commitish }}'
 #  This next variable is a hack to see ALL of the DOM of the github variable to help you work out what bits you may need to extract (so even though it is commented out, don't delete!)
   #GITHUB_CONTEXT: ${{ toJson(github) }}
